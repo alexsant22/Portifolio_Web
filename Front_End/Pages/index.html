@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlexSant - Dev Back-end</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../Styles/style.css" />
+    <script src="../Scripts/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <i class="fas fa-rocket"></i> Alex<span>Dev</span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+          <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Olá, sou <span>Alexandre Santos</span></h1>
+            <h2>Desenvolvedor Back-end</h2>
+            <p>
+              Especializado em criar soluções robustas e escaláveis utilizando
+              Java, Spring Boot e MySQL. Transformando ideias em realidade
+              através de código eficiente e bem estruturado.
+            </p>
+            <div class="hero-btns">
+              <a href="#projects" class="btn">Ver Projetos</a>
+              <a href="#contact" class="btn btn-outline">Contato</a>
+            </div>
+            <div class="social-icons">
+              <a href="https://github.com/alexsant22" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/alexandre-santana-santos?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BzDb6eubeR%2BqDw6Hrfx%2BM0A%3D%3D"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+              alt="Desenvolvedor Back-end"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Sobre Mim</h2>
+          <p>Conheça mais sobre minhas habilidades e experiência</p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Desenvolvedor Back-end com foco em Java e Spring Boot</h3>
+            <p>
+              Com formação em Técnico em Desenvolvimento de Sistemas, dedico-me
+              ao desenvolvimento de aplicações back-end robustas e escaláveis.
+              Minha experiência inclui criação de APIs RESTful, integração com
+              bancos de dados e implementação de sistemas de autenticação
+              seguros.
+            </p>
+            <p>
+              Tenho grande vontade de resolver problemas complexos e estou
+              sempre buscando aprender novas tecnologias e metodologias para
+              melhorar minhas habilidades e entregar soluções de alta qualidade.
+            </p>
+            <p>
+              Quando não estou codificando, gosto de contribuir para projetos
+              open-source, participar de comunidades de desenvolvimento e
+              explorar novas ferramentas e frameworks.
+            </p>
+          </div>
+          <div class="about-skills">
+            <h3>Minhas Habilidades e Ferramentas</h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-leaf"></i>
+                <span>Spring Boot</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-code"></i>
+                <span>API REST</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <span>MySQL</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-git-alt"></i>
+                <span>Git & GitHub</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2>Meus Projetos</h2>
+          <p>Alguns dos meus projetos desenvolvidos e disponíveis no GitHub</p>
+        </div>
+        <div class="projects-grid">
+          <!-- Projeto 1 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="../Assets/EscritoFS_preto.jpg"
+                alt="Sistema de Autenticação"
+              />
+            </div>
+            <div class="project-content">
+              <h3>FaceShield - SENAI</h3>
+              <p>
+                Este é um sistema de gerenciamento de empréstimos de ferramentas
+                completo, que utiliza reconhecimento facial para validação de
+                usuários. Ele permite o gerenciamento total (CRUD) de usuários,
+                ferramentas, locais, estados e empréstimos, além de oferecer
+                buscas detalhadas por ferramentas disponíveis, por
+                localização/estado e histórico de empréstimos.
+              </p>
+              <div class="tech-stack">
+                <span class="tech">Java</span>
+                <span class="tech">Spring Boot</span>
+                <span class="tech">JWT</span>
+                <span class="tech">MySQL</span>
+                <span class="tech">Python</span>
+                <span class="tech">HTML</span>
+                <span class="tech">JavaScript</span>
+                <span class="tech">CSS</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/SENAISP-Unid601-Projetos/FaceShield.git"
+                  class="btn"
+                  target="_blank"
+                  >Ver Código</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 2 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                alt="API de E-commerce"
+              />
+            </div>
+            <div class="project-content">
+              <h3>API de Funcionários</h3>
+              <p>
+                O projeto "projetoFuncionariosBD" é um sistema simples
+                desenvolvido em Java e SQL para o gerenciamento de funcionários
+                em uma empresa. A base inicial do código foi desenvolvida em
+                Python.
+              </p>
+              <div class="tech-stack">
+                <span class="tech">Java</span>
+                <span class="tech">Spring Boot</span>
+                <span class="tech">REST API</span>
+                <span class="tech">MySQL</span>
+                <span class="tech">Em processo...</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/alexsant22/projetoFuncionariosBD.git"
+                  class="btn"
+                  target="_blank"
+                  >Ver Código</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 3 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+                alt="Sistema de Monitoramento"
+              />
+            </div>
+            <div class="project-content">
+              <h3>Em Breve...</h3>
+              <p>Em processo...</p>
+              <div class="tech-stack">
+                <span class="tech">Em processo...</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn" target="_blank">Ver Código</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Entre em Contato</h2>
+          <p>Estou disponível para oportunidades e colaborações</p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Vamos conversar!</h3>
+            <p>
+              Se você está procurando um desenvolvedor back-end dedicado ou tem
+              uma oportunidade interessante, ficarei feliz em conversar.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>alexandre.santana2201@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Localização</h4>
+                  <p>São Carlos - SP, Brasil</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <div>
+                  <h4>GitHub</h4>
+                  <p>github.com/alexsant22</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Envie uma mensagem</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Assunto</label>
+                <input type="text" id="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Enviar Mensagem</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">Alex<span>Dev</span></div>
+          <div class="footer-links">
+            <a href="#home">Início</a>
+            <a href="#about">Sobre</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contato</a>
+          </div>
+          <div class="social-icons">
+            <a href="https://github.com/alexsant22" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/alexandre-santana-santos?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BzDb6eubeR%2BqDw6Hrfx%2BM0A%3D%3D"
+              target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+          <div class="copyright">
+            <p>&copy; 2024 Alexandre Santos. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
