@@ -347,24 +347,74 @@
           </div>
           <div class="contact-form">
             <h3>Envie uma mensagem</h3>
-            <form id="contactForm">
+            <form id="contactForm" aria-label="Formulário de contato">
               <div class="form-group">
-                <label for="name">Nome</label>
-                <input type="text" id="name" required />
+                <label for="name">Nome *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Seu nome completo"
+                  aria-required="true"
+                />
               </div>
               <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" required />
+                <label for="email">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="seu@email.com"
+                  aria-required="true"
+                />
               </div>
               <div class="form-group">
-                <label for="subject">Assunto</label>
-                <input type="text" id="subject" required />
+                <label for="subject">Assunto *</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  placeholder="Ex: Proposta de trabalho"
+                  aria-required="true"
+                />
               </div>
               <div class="form-group">
-                <label for="message">Mensagem</label>
-                <textarea id="message" required></textarea>
+                <label for="message">Mensagem *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  placeholder="Descreva sua mensagem aqui..."
+                  rows="5"
+                  aria-required="true"
+                ></textarea>
               </div>
-              <button type="submit" class="submit-btn">Enviar Mensagem</button>
+
+              <div class="form-footer">
+                <button
+                  type="submit"
+                  class="submit-btn"
+                  aria-label="Enviar mensagem"
+                >
+                  Enviar Mensagem
+                </button>
+
+                <p class="alternative-contact">
+                  <small>
+                    <i class="fas fa-info-circle" style="margin-right: 5px"></i>
+                    Prefere enviar manualmente? Use:
+                    <a
+                      href="mailto:alexandre.santana2201@gmail.com?subject=Contato%20do%20Portfólio"
+                      aria-label="Enviar email diretamente para alexandre.santana2201@gmail.com"
+                    >
+                      alexandre.santana2201@gmail.com
+                    </a>
+                  </small>
+                </p>
+              </div>
             </form>
           </div>
         </div>

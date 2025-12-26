@@ -518,6 +518,92 @@ footer {
   opacity: 0.7;
 }
 
+/* Estilos para o formulário de contato */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary); /* estava #646cff */
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1); /* rgba com cor primária */
+}
+
+/* Estilo para campo com erro */
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #ff4757;
+}
+
+/* Estilo para o link alternativo */
+.alternative-contact {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #334155;
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.alternative-contact a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.alternative-contact a:hover {
+  text-decoration: underline;
+}
+
+/* ADICIONE ESTES ESTILOS PARA MELHORAR O FORMULÁRIO */
+.form-footer {
+  margin-top: 10px;
+}
+
+.alternative-contact i {
+  color: var(--primary);
+}
+
+/* Botão de envio com estado de loading */
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submit-btn.loading {
+  position: relative;
+  color: transparent;
+}
+
+.submit-btn.loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin: -8px 0 0 -8px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ADICIONE TAMBÉM UM PEQUENO AJUSTE PARA OS INPUTS NO MODO CLARO */
+@media (prefers-color-scheme: light) {
+  .form-group input,
+  .form-group textarea {
+    background: white;
+    color: var(--dark);
+  }
+
+  .alternative-contact {
+    color: var(--dark);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .hero-content,
