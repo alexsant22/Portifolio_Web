@@ -1,91 +1,106 @@
-// Form submission with mailto fallback
-const contactForm = document.getElementById("contactForm");
+// Menu mobile toggle
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
 
-contactForm.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  // Get form values
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const subject = document.getElementById("subject").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  // Validação básica
-  if (!name || !email || !subject || !message) {
-    alert("Por favor, preencha todos os campos obrigatórios.");
-    return;
-  }
-
-  // Validação de email simples
-  if (!validateEmail(email)) {
-    alert("Por favor, insira um endereço de email válido.");
-    return;
-  }
-
-  // Adiciona loading state ao botão com spinner
-  const submitBtn = contactForm.querySelector(".submit-btn");
-  const originalText = submitBtn.textContent;
-
-  submitBtn.classList.add("loading");
-  submitBtn.textContent = "Preparando email...";
-  submitBtn.disabled = true;
-
-  // Create mailto link com formatação melhor
-  const emailBody = `Olá Alexandre,
-
-Nome: ${name}
-Email: ${email}
-Assunto: ${subject}
-
-Mensagem:
-${message}
-
----
-Esta mensagem foi enviada através do seu portfólio online.`;
-
-  const mailtoLink = `mailto:alexandre.santana2201@gmail.com?subject=${encodeURIComponent(
-    `Contato Portfólio: ${subject}`
-  )}&body=${encodeURIComponent(emailBody)}`;
-
-  // Usa window.location.href para melhor compatibilidade
-  setTimeout(() => {
-    try {
-      // Tenta abrir o email - método mais compatível
-      window.location.href = mailtoLink;
-
-      setTimeout(() => {
-        alert(
-          `✅ EMAIL ENVIADO COM SUCESSO!\n\n📧 Para: alexandre.santana2201@gmail.com\n📋 Assunto: ${subject}\n👤 De: ${name} (${email})\n\nVerifique seu cliente de email.`
-        );
-      }, 100);
-    } catch (error) {
-      // Fallback se der erro
-      alert(
-        `⚠ Não foi possível abrir automaticamente.\n\nPor favor, copie este endereço e envie manualmente:\n\n${mailtoLink}`
-      );
-    } finally {
-      // Reset form após 2 segundos
-      setTimeout(() => {
-        contactForm.reset();
-        submitBtn.classList.remove("loading");
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }, 2000);
-    }
-  }, 300);
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
 
-// Função para validar email
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+
+    // Close mobile menu after click
+    if (navLinks.classList.contains("active")) {
+      navLinks.classList.remove("active");
+    }
+  });
+});
+
+// Animation on scroll
+const observerOptions = {
+  threshold: 0.1,
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate");
+    }
+  });
+}, observerOptions);
+
+// Observe sections
+document.querySelectorAll("section").forEach((section) => {
+  observer.observe(section);
+});
+
+// Função para validar email (mantida caso precise no futuro)
 function validateEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
 }
 
-// Adicionar máscara/validação em tempo real
-document.getElementById("email").addEventListener("blur", function () {
-  if (this.value && !validateEmail(this.value)) {
-    this.style.borderColor = "#ff4757";
-  } else {
-    this.style.borderColor = "";
+// Adicionar validação em tempo real (se adicionar formulário no futuro)
+if (document.getElementById("email")) {
+  document.getElementById("email").addEventListener("blur", function () {
+    if (this.value && !validateEmail(this.value)) {
+      this.style.borderColor = "#ff4757";
+    } else {
+      this.style.borderColor = "";
+    }
+  });
+}
+
+// Opcional: Adicionar efeito de digitação no hero section
+function typeWriterEffect() {
+  const heroText = document.querySelector(".hero h1");
+  if (heroText) {
+    const text = heroText.textContent;
+    heroText.textContent = "";
+
+    let i = 0;
+    const typeWriter = () => {
+      if (i < text.length) {
+        heroText.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    };
+
+    // Inicia após 1 segundo
+    setTimeout(typeWriter, 1000);
   }
+}
+
+// Inicia quando a página carrega
+document.addEventListener("DOMContentLoaded", () => {
+  typeWriterEffect();
 });
+
+// Opcional: Adicionar animação nas habilidades
+const skillItems = document.querySelectorAll(".skill-item");
+skillItems.forEach((item, index) => {
+  item.style.animationDelay = `${index * 0.1}s`;
+});
+
+// Opcional: Contador de visitas simples (local storage)
+if (typeof localStorage !== "undefined") {
+  let visitCount = localStorage.getItem("portfolioVisits");
+  if (visitCount) {
+    visitCount = parseInt(visitCount) + 1;
+  } else {
+    visitCount = 1;
+  }
+  localStorage.setItem("portfolioVisits", visitCount);
+
+  // Pode mostrar discretamente no console
+  console.log(
+    `👋 Bem-vindo! Esta é sua visita #${visitCount} ao meu portfólio.`
+  );
+}
