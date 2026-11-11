@@ -1,3 +1,4 @@
+/* Cores principais do tema. Alguns fundos usam cor fixa na própria seção. */
 :root {
   --primary: #8b5cf6;
   --primary-dark: #7c3aed;
@@ -38,6 +39,7 @@ section {
   padding: 80px 0;
 }
 
+/* Botões: .btn é o preenchido, e .btn .btn-outline é o vazado */
 .btn {
   display: inline-block;
   background: var(--primary);
@@ -66,6 +68,7 @@ section {
   color: white;
 }
 
+/* Título de cada seção, com a barra roxa desenhada pelo ::after */
 .section-title {
   text-align: center;
   margin-bottom: 60px;
@@ -90,7 +93,7 @@ section {
   border-radius: 2px;
 }
 
-/* Header Styles */
+/* Header: fixo no topo, por isso o hero tem padding-top maior */
 header {
   background-color: #1e1b4b;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -201,6 +204,16 @@ nav {
   color: var(--primary);
 }
 
+/* Letras do efeito de digitação: herdam a cor de quem as contém */
+.hero h1 .letter {
+  color: inherit;
+  visibility: hidden;
+}
+
+.hero h1 .letter.typed {
+  visibility: visible;
+}
+
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
@@ -307,7 +320,8 @@ nav {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  /* min() impede que os 350px estourem a tela em celulares estreitos */
+  grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
   gap: 30px;
 }
 
@@ -343,6 +357,19 @@ nav {
 
 .project-content {
   padding: 25px;
+}
+
+/* Selo de andamento, separado das tags de tecnologia */
+.project-status {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  border: 1px solid #fbbf24;
+  border-radius: 20px;
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .project-content h3 {
@@ -480,7 +507,46 @@ footer {
   opacity: 0.7;
 }
 
+/* Animações de entrada: .reveal e .animate são aplicadas pelo script.js.
+   O movimento fica no .container para não deslocar o destino dos links do menu. */
+section.reveal > .container {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.reveal.animate > .container {
+  opacity: 1;
+  transform: none;
+}
+
+/* backwards esconde o item durante o atraso e libera o hover quando termina */
+.about.animate .skill-item {
+  animation: skill-in 0.5s ease backwards;
+}
+
+@keyframes skill-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+/* Respeita quem configurou o sistema para reduzir movimento */
+@media (prefers-reduced-motion: reduce) {
+  section.reveal > .container {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .about.animate .skill-item {
+    animation: none;
+  }
+}
+
 /* Responsive Design */
+/* Até 992px: hero e sobre empilham em uma coluna */
 @media (max-width: 992px) {
   .hero-content,
   .about-content {
@@ -494,6 +560,7 @@ footer {
   }
 }
 
+/* Até 768px: entra o menu mobile */
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
@@ -509,6 +576,7 @@ footer {
     align-items: center;
     padding: 20px 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    /* Fechado: recorte com altura zero. O .active abre até a altura total. */
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: all 0.4s ease;
   }
@@ -539,6 +607,7 @@ footer {
   }
 }
 
+/* Até 480px: habilidades em uma coluna */
 @media (max-width: 480px) {
   .skills-list {
     grid-template-columns: 1fr;

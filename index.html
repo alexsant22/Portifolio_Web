@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AlexSant - Dev Back-end</title>
+    <!-- Ícones: Font Awesome (classes fa-*) e Devicon (classes devicon-*) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -89,13 +90,25 @@
             <h3>Desenvolvedor Full Stack com foco em Back-end</h3>
 
             <p>
-              Com formação em Técnico em Desenvolvimento de Sistemas,
+              Com formação em Técnico em Desenvolvimento de Sistemas e cursando
+              Tecnologia em Sistemas para Internet no IFSP Araraquara,
               especializo-me em desenvolvimento back-end com
               <strong>Java/Spring Boot</strong> e
               <strong>Node.js/NestJS</strong>, complementando com conhecimentos
               em front-end utilizando <strong>React</strong>. Essa combinação me
               permite criar soluções completas e bem integradas, desde a API até
               a interface.
+            </p>
+
+            <p>
+              Atualmente sou Estagiário de Implantação na
+              <strong>Visio.ai</strong>, onde acompanho a solução desde a
+              configuração no ambiente do cliente até a operação estável. Essa
+              proximidade com o uso real tem mudado a forma como penso
+              arquitetura, tratamento de erros e experiência de uso.
+              Antes disso, fui aprendiz de programação na Tecumseh do Brasil, onde
+              desenvolvi aplicações front-end com <strong>React</strong> e apoiei
+              a área de infraestrutura de TI.
             </p>
 
             <p>
@@ -112,14 +125,13 @@
             <p>
               Sou movido pela vontade de resolver problemas complexos e estou
               constantemente aprendendo novas tecnologias para criar soluções
-              eficientes. Quando não estou codificando, contribuo para projetos
-              open-source e participo ativamente de comunidades de
-              desenvolvimento.
+              eficientes.
             </p>
           </div>
 
           <div class="about-skills">
             <h3>Minhas Habilidades e Ferramentas</h3>
+            <!-- Para incluir uma habilidade, copie um .skill-item -->
             <div class="skills-list">
               <div class="skill-item">
                 <i class="fab fa-java"></i>
@@ -172,6 +184,11 @@
               </div>
 
               <div class="skill-item">
+                <i class="devicon-microsoftsqlserver-plain"></i>
+                <span>SQL Server</span>
+              </div>
+
+              <div class="skill-item">
                 <i class="fab fa-python"></i>
                 <span>Python</span>
               </div>
@@ -198,6 +215,7 @@
           <h2>Meus Projetos</h2>
           <p>Alguns dos meus projetos desenvolvidos e disponíveis no GitHub</p>
         </div>
+        <!-- Para incluir um projeto, copie um .project-card -->
         <div class="projects-grid">
           <!-- Projeto 1 -->
           <div class="project-card">
@@ -243,28 +261,26 @@
             <div class="project-image">
               <img
                 src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                alt="API de E-commerce"
+                alt="Código-fonte em um editor, ilustrando o ColabManager"
               />
             </div>
             <div class="project-content">
+              <span class="project-status">Em desenvolvimento</span>
               <h3>ColabManager</h3>
               <p>
-                Este projeto é um sistema de gerenciamento de colaboradores
-                desenvolvido como uma API RESTful em Java. Construído com Spring
-                Boot e JPA para gerenciar funcionários, cargos e departamentos,
-                o sistema utiliza um banco de dados MySQL e foi concebido a
-                partir de um protótipo inicial em Python.
+                Sistema full-stack de gestão de colaboradores, cargos e
+                departamentos. A API REST em Spring Boot com PostgreSQL já roda
+                em Docker, e o front-end em React está em desenvolvimento.
               </p>
               <div class="tech-stack">
                 <span class="tech">Java</span>
                 <span class="tech">Spring Boot</span>
-                <span class="tech">REST API</span>
-                <span class="tech">MySQL</span>
-                <span class="tech">Em processo...</span>
+                <span class="tech">PostgreSQL</span>
+                <span class="tech">Docker</span>
               </div>
               <div class="project-links">
                 <a
-                  href="https://github.com/alexsant22/projetoFuncionariosBD.git"
+                  href="https://github.com/alexsant22/ColabManager"
                   class="btn"
                   target="_blank"
                   >Ver Código</a
@@ -277,27 +293,28 @@
           <div class="project-card">
             <div class="project-image">
               <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
-                alt="Sistema de Monitoramento"
+                src="Front_End/Assets/nest-api-base.svg"
+                alt="Lista de rotas da API nest-api-base"
               />
             </div>
             <div class="project-content">
-              <h3>Calculadora On-line em React</h3>
+              <h3>NestJS API Base</h3>
               <p>
-                O projeto "Calculadora_React" é uma calculadora web responsiva,
-                desenvolvida em React e Vite. Ele suporta operações matemáticas
-                básicas, permite a alternância entre temas claro e escuro, e
-                pode ser operado tanto com o rato quanto com o teclado.
+                API base em NestJS para servir de ponto de partida a outras
+                aplicações. Usa Prisma com PostgreSQL, valida os dados com
+                class-validator, documenta as rotas com Swagger e já traz um
+                CRUD de usuários e projetos com relacionamento 1:N.
               </p>
               <div class="tech-stack">
-                <span class="tech">HTML</span>
-                <span class="tech">JavaScript</span>
-                <span class="tech">CSS</span>
-                <span class="tech">React</span>
+                <span class="tech">TypeScript</span>
+                <span class="tech">NestJS</span>
+                <span class="tech">Prisma</span>
+                <span class="tech">PostgreSQL</span>
+                <span class="tech">Swagger</span>
               </div>
               <div class="project-links">
                 <a
-                  href="https://github.com/alexsant22/Calculadora_React.git"
+                  href="https://github.com/alexsant22/nest-api-base"
                   class="btn"
                   target="_blank"
                   >Ver Código</a

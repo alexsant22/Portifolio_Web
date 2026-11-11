@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Rotas da API nest-api-base">
+  <rect width="800" height="400" fill="#0f172a"/>
+  <rect x="0" y="0" width="800" height="84" fill="#1e1b4b"/>
+  <g font-family="Consolas, Menlo, monospace" font-weight="700">
+    <text x="140" y="58" font-size="38" fill="#e2e8f0">nest-api-base</text>
+    <g font-size="34">
+      <text x="140" y="150" fill="#10b981">GET</text>
+      <text x="280" y="150" fill="#e2e8f0">/users</text>
+      <text x="140" y="212" fill="#8b5cf6">POST</text>
+      <text x="280" y="212" fill="#e2e8f0">/users</text>
+      <text x="140" y="274" fill="#fbbf24">PATCH</text>
+      <text x="280" y="274" fill="#e2e8f0">/projects/:id</text>
+      <text x="140" y="336" fill="#10b981">GET</text>
+      <text x="280" y="336" fill="#e2e8f0">/docs</text>
+    </g>
+  </g>
+</svg>
