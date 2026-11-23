@@ -398,11 +398,24 @@ nav {
   font-size: 0.9rem;
   font-weight: 500;
   border: 1px solid var(--primary);
+  /* Ícone e nome lado a lado, alinhados pelo centro */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tech i {
+  font-size: 1rem;
 }
 
 .project-links {
   display: flex;
   gap: 15px;
+}
+
+/* Ícone antes do texto nos botões do card (GitHub, link externo) */
+.project-links .btn i {
+  margin-right: 8px;
 }
 
 /* Contact Section */
@@ -507,7 +520,8 @@ footer {
   opacity: 0.7;
 }
 
-/* Animações de entrada: .reveal e .animate são aplicadas pelo script.js.
+/* Animações de entrada: .reveal e .animate são aplicadas pelo componente
+   Section, com o hook useReveal.
    O movimento fica no .container para não deslocar o destino dos links do menu. */
 section.reveal > .container {
   opacity: 0;
