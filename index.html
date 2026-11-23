@@ -4,6 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AlexSant - Dev Back-end</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="APIs com Java/Spring e NestJS, front-end em React. Veja meus projetos."
+    />
+
+    <!-- Prévia do link no LinkedIn, WhatsApp, Discord etc. (Open Graph).
+         Ficam fixas aqui porque os robôs desses apps não rodam o React.
+         Endereços completos, com https://, porque o robô não sabe de qual site é o caminho. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://portifolio-web-alexsantos.vercel.app" />
+    <meta property="og:title" content="Alexandre Santos | Desenvolvedor Full Stack" />
+    <meta
+      property="og:description"
+      content="APIs com Java/Spring e NestJS, front-end em React. Veja meus projetos."
+    />
+    <meta
+      property="og:image"
+      content="https://portifolio-web-alexsantos.vercel.app/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Alexandre Santos, Desenvolvedor Full Stack com foco em Back-end"
+    />
+    <!-- Pede o card com imagem grande no X e no Discord -->
+    <meta name="twitter:card" content="summary_large_image" />
     <!-- Ícones: Font Awesome (classes fa-*) e Devicon (classes devicon-*) -->
     <link
       rel="stylesheet"
@@ -11,440 +40,12 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"
     />
-    <link rel="stylesheet" href="Front_End/Styles/style.css" />
-    <script src="Front_End/Scripts/script.js" defer></script>
   </head>
   <body>
-    <!-- Header -->
-    <header>
-      <div class="container">
-        <nav>
-          <div class="logo">
-            <a href="#home" style="color: inherit; text-decoration: none">
-              <i class="fas fa-rocket"></i> Alex<span>Dev</span>
-            </a>
-          </div>
-          <ul class="nav-links">
-            <li><a href="#home">Início</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#contact">Contato</a></li>
-          </ul>
-          <div class="menu-btn">
-            <i class="fas fa-bars"></i>
-          </div>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1>Olá, sou <span>Alexandre Santos</span></h1>
-            <h2>Desenvolvedor Full Stack com foco em Back-end</h2>
-            <p>
-              Desenvolvo APIs escaláveis com Java/Spring e Node.js
-              (TypeScript/NestJS), com conhecimento em React para o Front-end.
-              Integrando bancos de dados SQL e aplicando boas práticas de
-              desenvolvimento. Foco em criar soluções eficientes que resolvem
-              problemas reais através de código bem estruturado.
-            </p>
-            <div class="hero-btns">
-              <a href="#projects" class="btn">Ver Projetos</a>
-              <a href="#contact" class="btn btn-outline">Contato</a>
-            </div>
-            <div class="social-icons">
-              <a href="https://github.com/alexsant22" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/alexandre-santana-santos?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BzDb6eubeR%2BqDw6Hrfx%2BM0A%3D%3D"
-                target="_blank"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-          <div class="hero-image">
-            <img
-              src="Front_End/Assets/img_perfil2.jpg"
-              alt="Desenvolvedor Back-end"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-      <div class="container">
-        <div class="section-title">
-          <h2>Sobre Mim</h2>
-          <p>Conheça mais sobre minhas habilidades e experiência</p>
-        </div>
-        <div class="about-content">
-          <div class="about-text">
-            <h3>Desenvolvedor Full Stack com foco em Back-end</h3>
-
-            <p>
-              Com formação em Técnico em Desenvolvimento de Sistemas e cursando
-              Tecnologia em Sistemas para Internet no IFSP Araraquara,
-              especializo-me em desenvolvimento back-end com
-              <strong>Java/Spring Boot</strong> e
-              <strong>Node.js/NestJS</strong>, complementando com conhecimentos
-              em front-end utilizando <strong>React</strong>. Essa combinação me
-              permite criar soluções completas e bem integradas, desde a API até
-              a interface.
-            </p>
-
-            <p>
-              Atualmente sou Estagiário de Implantação na
-              <strong>Visio.ai</strong>, onde acompanho a solução desde a
-              configuração no ambiente do cliente até a operação estável. Essa
-              proximidade com o uso real tem mudado a forma como penso
-              arquitetura, tratamento de erros e experiência de uso.
-              Antes disso, fui aprendiz de programação na Tecumseh do Brasil, onde
-              desenvolvi aplicações front-end com <strong>React</strong> e apoiei
-              a área de infraestrutura de TI.
-            </p>
-
-            <p>
-              Possuo conhecimento sólido em
-              <strong>JavaScript/TypeScript</strong> para desenvolvimento full
-              stack, com experiência em <strong>React</strong> para interfaces
-              modernas. Também trabalho com <strong>Python</strong> para
-              automações e scripts, aplicando metodologias
-              <strong>ágeis (Scrum)</strong> para garantir entregas incrementais
-              de qualidade, com versionamento através do
-              <strong>Git & GitHub</strong>.
-            </p>
-
-            <p>
-              Sou movido pela vontade de resolver problemas complexos e estou
-              constantemente aprendendo novas tecnologias para criar soluções
-              eficientes.
-            </p>
-          </div>
-
-          <div class="about-skills">
-            <h3>Minhas Habilidades e Ferramentas</h3>
-            <!-- Para incluir uma habilidade, copie um .skill-item -->
-            <div class="skills-list">
-              <div class="skill-item">
-                <i class="fab fa-java"></i>
-                <span>Java</span>
-              </div>
-
-              <div class="skill-item">
-                <i class="devicon-spring-plain"></i>
-                <span>Spring Boot</span>
-              </div>
-
-              <div class="skill-item">
-                <i class="fas fa-code"></i>
-                <span>API REST</span>
-              </div>
-
-              <div class="skill-item">
-                <i class="devicon-typescript-plain"></i>
-                <span>TypeScript</span>
-              </div>
-
-              <div class="skill-item">
-                <i class="devicon-nestjs-plain"></i>
-                <span>NestJS</span>
-              </div>
-
-              <div class="skill-item">
-                <i class="fab fa-node-js"></i>
-                <span>Node.js</span>
-              </div>
-
-              <div class="skill-item">
-                <i class="fab fa-js-square"></i>
-                <span>JavaScript</span>
-              </div>
-
-              <div class="skill-item">
-                <i class="fab fa-react"></i>
-                <span>React</span>
-              </div>
-
-              <div class="skill-item">
-                <i class="devicon-mysql-plain"></i>
-                <span>MySQL</span>
-              </div>
-
-              <div class="skill-item">
-                <i class="devicon-postgresql-plain"></i>
-                <span>PostgreSQL</span>
-              </div>
-
-              <div class="skill-item">
-                <i class="devicon-microsoftsqlserver-plain"></i>
-                <span>SQL Server</span>
-              </div>
-
-              <div class="skill-item">
-                <i class="fab fa-python"></i>
-                <span>Python</span>
-              </div>
-
-              <div class="skill-item">
-                <i class="fab fa-git-alt"></i>
-                <span>Git & GitHub</span>
-              </div>
-
-              <div class="skill-item">
-                <i class="fas fa-tasks"></i>
-                <span>Scrum</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-      <div class="container">
-        <div class="section-title">
-          <h2>Meus Projetos</h2>
-          <p>Alguns dos meus projetos desenvolvidos e disponíveis no GitHub</p>
-        </div>
-        <!-- Para incluir um projeto, copie um .project-card -->
-        <div class="projects-grid">
-          <!-- Projeto 1 -->
-          <div class="project-card">
-            <div class="project-image">
-              <img
-                src="Front_End/Assets/EscritoFS_preto.jpg"
-                alt="Sistema de Autenticação"
-              />
-            </div>
-            <div class="project-content">
-              <h3>FaceShield - SENAI</h3>
-              <p>
-                Este é um sistema de gerenciamento de empréstimos de ferramentas
-                completo, que utiliza reconhecimento facial para validação de
-                usuários. Ele permite o gerenciamento total (CRUD) de usuários,
-                ferramentas, locais, estados e empréstimos, além de oferecer
-                buscas detalhadas por ferramentas disponíveis, por
-                localização/estado e histórico de empréstimos.
-              </p>
-              <div class="tech-stack">
-                <span class="tech">Java</span>
-                <span class="tech">Spring Boot</span>
-                <span class="tech">JWT</span>
-                <span class="tech">MySQL</span>
-                <span class="tech">Python</span>
-                <span class="tech">HTML</span>
-                <span class="tech">JavaScript</span>
-                <span class="tech">CSS</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/orgs/FaceShield-SENAI-TCC/repositories"
-                  class="btn"
-                  target="_blank"
-                  >Ver Código</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Projeto 2 -->
-          <div class="project-card">
-            <div class="project-image">
-              <img
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                alt="Código-fonte em um editor, ilustrando o ColabManager"
-              />
-            </div>
-            <div class="project-content">
-              <span class="project-status">Em desenvolvimento</span>
-              <h3>ColabManager</h3>
-              <p>
-                Sistema full-stack de gestão de colaboradores, cargos e
-                departamentos. A API REST em Spring Boot com PostgreSQL já roda
-                em Docker, e o front-end em React está em desenvolvimento.
-              </p>
-              <div class="tech-stack">
-                <span class="tech">Java</span>
-                <span class="tech">Spring Boot</span>
-                <span class="tech">PostgreSQL</span>
-                <span class="tech">Docker</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/alexsant22/ColabManager"
-                  class="btn"
-                  target="_blank"
-                  >Ver Código</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Projeto 3 -->
-          <div class="project-card">
-            <div class="project-image">
-              <img
-                src="Front_End/Assets/nest-api-base.svg"
-                alt="Lista de rotas da API nest-api-base"
-              />
-            </div>
-            <div class="project-content">
-              <h3>NestJS API Base</h3>
-              <p>
-                API base em NestJS para servir de ponto de partida a outras
-                aplicações. Usa Prisma com PostgreSQL, valida os dados com
-                class-validator, documenta as rotas com Swagger e já traz um
-                CRUD de usuários e projetos com relacionamento 1:N.
-              </p>
-              <div class="tech-stack">
-                <span class="tech">TypeScript</span>
-                <span class="tech">NestJS</span>
-                <span class="tech">Prisma</span>
-                <span class="tech">PostgreSQL</span>
-                <span class="tech">Swagger</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/alexsant22/nest-api-base"
-                  class="btn"
-                  target="_blank"
-                  >Ver Código</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Projeto 4 -->
-          <div class="project-card">
-            <div class="project-image">
-              <img
-                src="Front_End/Assets/tvd-api.svg"
-                alt="Lista de rotas da API tvd-api"
-              />
-            </div>
-            <div class="project-content">
-              <h3>tvd-api</h3>
-              <p>
-                API REST pública de The Vampire Diaries, no formato da SWAPI,
-                feita para o Projeto Prático de Interfaces Web do IFSP. Traz
-                personagens, episódios, temporadas, espécies e famílias, com
-                paginação e busca por nome, e está publicada na Vercel.
-              </p>
-              <div class="tech-stack">
-                <span class="tech">JavaScript</span>
-                <span class="tech">Node.js</span>
-                <span class="tech">Express</span>
-                <span class="tech">Vercel</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/alexsant22/tvd-api"
-                  class="btn"
-                  target="_blank"
-                  >Ver Código</a
-                >
-                <a
-                  href="https://tvd-api.vercel.app/api"
-                  class="btn btn-outline"
-                  target="_blank"
-                  >Ver API</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="section-title">
-          <h2>Entre em Contato</h2>
-          <p>Estou disponível para oportunidades e colaborações</p>
-        </div>
-        <div class="contact-content">
-          <div class="contact-info">
-            <h3>Vamos conversar!</h3>
-            <p>
-              Se você está procurando um desenvolvedor back-end dedicado ou tem
-              uma oportunidade interessante, ficarei feliz em conversar.
-            </p>
-            <div class="contact-details">
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                  <h4>Email</h4>
-                  <p>alexandre.santana2201@gmail.com</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                  <h4>Localização</h4>
-                  <p>São Carlos - SP, Brasil</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="fab fa-github"></i>
-                <div>
-                  <h4>GitHub</h4>
-                  <p>github.com/alexsant22</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Botão de email direto -->
-            <div style="margin-top: 30px">
-              <a
-                href="mailto:alexandre.santana2201@gmail.com?subject=Contato%20do%20Portfólio"
-                class="btn"
-                style="display: inline-block"
-              >
-                <i class="fas fa-paper-plane" style="margin-right: 8px"></i>
-                Enviar Email Direto
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">Alex<span>Dev</span></div>
-          <div class="footer-links">
-            <a href="#home">Início</a>
-            <a href="#about">Sobre</a>
-            <a href="#projects">Projetos</a>
-            <a href="#contact">Contato</a>
-          </div>
-          <div class="social-icons">
-            <a href="https://github.com/alexsant22" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/alexandre-santana-santos?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BzDb6eubeR%2BqDw6Hrfx%2BM0A%3D%3D"
-              target="_blank"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-          </div>
-          <div class="copyright">
-            <p>&copy; 2024 Alexandre Santos. Todos os direitos reservados.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- O React monta o site inteiro aqui, a partir de src/main.jsx -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

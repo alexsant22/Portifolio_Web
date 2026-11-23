@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Ícone da aba: </> no roxo do site sobre o roxo escuro do header -->
+  <rect width="32" height="32" rx="7" fill="#1e1b4b"/>
+  <path d="M11 9.5 L4.8 16 L11 22.5" fill="none" stroke="#8b5cf6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21 9.5 L27.2 16 L21 22.5" fill="none" stroke="#8b5cf6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18.2 7.5 L13.8 24.5" fill="none" stroke="#c4b5fd" stroke-width="2.6" stroke-linecap="round"/>
+</svg>
