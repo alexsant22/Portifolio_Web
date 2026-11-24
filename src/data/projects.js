@@ -74,7 +74,7 @@ export const projects = [
       {
         label: "Ver API",
         icon: "fas fa-arrow-up-right-from-square",
-        href: "https://tvd-api.vercel.app/api",
+        href: "https://tvd-api.vercel.app/docs",
         outline: true,
       },
     ],

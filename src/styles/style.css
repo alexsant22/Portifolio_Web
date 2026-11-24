@@ -132,8 +132,17 @@ nav {
   transform: scale(1.05);
 }
 
-.logo a i {
-  margin-right: 8px;
+/* Monograma <AS/> antes do nome, no mesmo estilo do favicon </> */
+.logo .logo-mark {
+  font-family: "Consolas", "Fira Code", "Courier New", monospace;
+  font-size: 0.85em;
+  color: var(--primary);
+  margin-right: 10px;
+  letter-spacing: -0.5px;
+}
+
+.logo .logo-mark-initials {
+  color: var(--light);
 }
 
 .nav-links {

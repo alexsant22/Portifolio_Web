@@ -18,7 +18,10 @@ export default function Header() {
         <nav>
           <div className="logo">
             <a href="#home" onClick={handleNavigate}>
-              <i className="fas fa-rocket"></i> Alex<span>Dev</span>
+              <span className="logo-mark" aria-hidden="true">
+                &lt;<span className="logo-mark-initials">AS</span>/&gt;
+              </span>
+              Alex<span>Dev</span>
             </a>
           </div>
           <ul className={menuOpen ? "nav-links active" : "nav-links"}>
