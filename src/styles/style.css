@@ -132,8 +132,14 @@ nav {
   transform: scale(1.05);
 }
 
-.logo a i {
-  margin-right: 8px;
+/* Monograma <AS/> antes do nome: SVG do artefato "Ícone do AlexDev" */
+.logo-mark {
+  width: 1.4em;
+  height: 1.4em;
+  vertical-align: middle;
+  margin-right: 10px;
+  position: relative;
+  top: -0.08em;
 }
 
 .nav-links {
